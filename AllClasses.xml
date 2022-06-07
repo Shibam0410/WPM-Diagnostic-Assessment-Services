@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestNGReport" parallel="false">
+<listeners>
+		<listener class-name="Drivers.ScreenshotsListener"></listener>
+</listeners>
+<!-- <listeners>
+		<listener class-name="Drivers.CustomTestNGReport" />
+</listeners>	 -->
+
+	<test name="WPMSanityTesting" preserve-order="true">
+
+		<classes>
+		
+			<!-- Create, Edit report, Manage Images  -->	
+		 	<class name="ProjectReport.Login" /> 	 	   
+  			<class name="ProjectReport.CreateNewReport" />  
+ 		 	<class name="ProjectReport.Dashboard" /> 
+			<class name="ProjectReport.EditReport" /> 
+	
+ 		      <class name="QuickLinks.ProjectImages" />  
+               <class name="QuickLinks.UploadInvoice" /> 
+			 <class name="QuickLinks.InviteMember" />  
+ 			<class name="QuickLinks.ViewMembers" /> 
+ 			<class name="QuickLinks.RevokeMember" />  
+ 			<class name="QuickLinks.PublishReport" />
+			 <class name="QuickLinks.RevertToDraft" />   
+			
+ 
+		</classes>
+</test> 
+</suite>
